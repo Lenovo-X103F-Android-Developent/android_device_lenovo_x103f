@@ -1,20 +1,21 @@
 # Audio
-ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.fluencetype=none
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 
-persist.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
-persist.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
-persist.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
-persist.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb
-persist.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb
-persist.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb
-persist.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
+#persist.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
+#persist.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
+#persist.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
+#persist.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb
+#persist.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb
+#persist.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb
+#persist.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
 
 # Camera
 persist.camera.cpp.duplication=false
 persist.camera.hal.debug.mask=0
+persist.camera.longshot.stages=1
 
 # Dalvik
 dalvik.vm.heapstartsize=8m
@@ -25,16 +26,89 @@ dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=8m
 
 # Display
+config.svi.xml=1
 ro.qualcomm.cabl=0
 ro.qualcomm.svi=1
-ro.sf.lcd_density=240
+ro.sf.lcd_density=180
+persist.panel.orientation=90
 
 # Perf
-ro.sys.fw.dex2oat_thread_count=4
+ro.sys.fw.dex2oat_thread_count=2
+
+# Display
+ro.opengles.version=196608
+
+# Perf
+ro.min_freq_0=800000
+
+
+########
+
+
+# Audio
+af.fast_track_multiplier=1
+audio.deep_buffer.media=true
+audio.offload.min.duration.secs=30
+audio.offload.buffer.size.kb=32
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+audio.offload.video=true
+vendor.audio.av.streaming.offload.enable=true
+vendor.audio.offload.buffer.size.kb=64
+vendor.audio.offload.gapless.enabled=false
+vendor.audio.offload.multiple.enabled=false
+vendor.audio_hal.period_size=192
+vendor.dedicated.device.for.voip=true
+vendor.voice.path.for.pcm.voip=false
+av.offload.enable=true
+
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+ro.config.vibrate_of_touch=true
+
+# Bluetooth
+vendor.qcom.bluetooth.soc=pronto
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
+ro.qualcomm.bt.hci_transport=smd
+
+# Display
+debug.hwui.use_buffer_age=false
+debug.composition.type=c2d
+debug.mdpcomp.idletime=600
+persist.hwc.mdpcomp.enable=true
+persist.hwc.ptor.enable=true
+debug.enable.sglscale=1
+ro.qcom.screencolor=1
+
+# GPS
+persist.gps.qc_nlp_in_use=0
+ro.gps.agps_provider=1
+ro.qc.sdk.izat.premium_enabled=0
+ro.qc.sdk.izat.service_mask=0x0
+
+# Other
+ro.oem_unlock_supported=0
+ro.frp.pst=/dev/block/bootdevice/by-name/hidden
+
+qemu.hw.mainkeys=0
+
+# Media
+drm.service.enabled=1
+vidc.enc.narrow.searchrange=1
+
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+# Perf
+ro.config.max_starting_bg=8
+ro.vendor.extension_library=libqti-perfd-client.so
+ro.core_ctl_min_cpu=0
+ro.core_ctl_max_cpu=4
 
 # Radio
-ril.ecclist=000,08,100,101,102,110,112,118,119,120,122,911,999
-ril.ecclist1=000,08,100,101,102,110,112,118,119,120,122,911,999
+ro.radio.noril=1
 
-#HW keys
-qemu.hw.mainkeys=1
+# Wi-Fi
+wifi.interface=wlan0

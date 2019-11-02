@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=a3lte
-VENDOR=samsung
+DEVICE=x103f
+VENDOR=lenovo
 
 INITIAL_COPYRIGHT_YEAR=2015
 

@@ -1,4 +1,0 @@
-service sec_nfc_service /vendor/bin/hw/vendor.samsung.hardware.nfc@1.0-service
-    class hal
-    user nfc
-    group nfc

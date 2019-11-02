@@ -15,4 +15,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a3lte.mk
+    $(LOCAL_DIR)/lineage_x103f.mk

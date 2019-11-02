@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=a3lte
-VENDOR=samsung
+DEVICE=x103f
+VENDOR=lenovo
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
